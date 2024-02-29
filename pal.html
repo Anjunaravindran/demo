@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Palindrome</title>
+        
+    </head>
+    <body>
+<form class="form1">
+    <div class="input">
+        <span><h3>Cheking Number Is Palindrome or Not</h3></span>
+    <input type="text" id="in" placeholder="Enter a number">
+    <input type="button" id="btn1" value="show" onclick="palindrome()">
+    <br><br>
+    
+</div>
+</form>
+<script>
+    function palindrome()
+    {
+        var x=document.getElementById('in').value;
+        let t=x ,r , sum=0;
+        while(x>0)
+        {
+           r=x%10;
+           sum=(sum*10)+r;
+           x=parseInt(x/10); 
+        }
+        if(t==sum)
+        {
+            console.log("Nunmber is Palindrome",sum);
+        }
+        else
+        {
+            console.log("Nunmber is Not Palindrome",sum);
+            
+        }
+    }
+</script>
+    </body>
+</html>
